@@ -1,0 +1,188 @@
+/* Set the global variables for everything. Change these to use your own fonts and colours. */
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  --base-fontsize: 1.15rem;
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
+  /* Default (light) theme */
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #d8dae1;
+  --accent: #0d47a1;
+  --accent-light: #90caf9;
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #212121;
+    --accent-bg: #2b2b2b;
+    --text: #dcdcdc;
+    --text-light: #ababab;
+    --border: #666;
+    --accent: #ffb300;
+    --accent-light: #ffecb3;
+    --code: #f06292;
+    --preformatted: #ccc;
+    --disabled: #111;
+  }
+
+  img,
+  video {
+    opacity: 0.6;
+  }
+}
+
+html {
+  /* Set the font globally */
+  font-family: var(--sans-font);
+}
+
+/* Make the body a nice central block */
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-size: var(--base-fontsize);
+  line-height: var(--line-height);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 0 0.5rem;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Format headers */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 0.96rem;
+}
+
+p {
+  margin: 1.5rem 0;
+}
+
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+/* Reduce header size on mobile */
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Format links & buttons */
+a,
+a:visited {
+  color: var(--accent);
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 5px;
+}
+
+a:hover {
+  color : var(--accent);
+  text-decoration: none;
+}
+
+/* Format the expanding box */
+details {
+  background: var(--accent-bg);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+}
+
+details[open] {
+  padding: 0.6rem 1rem 0.75rem 1rem;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+details[open] > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+ol,
+ul {
+  padding-left: 3rem;
+}
