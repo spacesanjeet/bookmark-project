@@ -156,6 +156,11 @@ details ol li {
     .header-right {
       display: none;
     }
+
+    img {
+      max-width: 100%; 
+      height: auto;
+    }
 }
 
 /* Small screens (Tablets 576px - 768px) */
@@ -172,6 +177,11 @@ details ol li {
 
     .header-right {
       display: none;
+    }
+
+    img {
+      max-width: 100%; 
+      height: auto;
     }
 }
 
@@ -196,4 +206,55 @@ details ol li {
       color: white;
       text-decoration: none;
     }
+
+    img {
+      width: 500px; 
+      height: 500px;
+    }
+
+    figure img {
+      display: block;
+      margin: 0 auto; /* Centers the image */
+      max-width: 100%; /* Ensures it stays within the container */
+    }
+}
+
+.p-notice {
+  background-color: lightpink;
+  border: 3px solid #444;
+  padding: 1rem;
+  margin-bottom: 2rem 0;
+}
+
+.p-notice a {
+  color: black;
+  text-decoration-style: solid;
+}
+
+.p-notice a:hover {
+  color: darkblue;
+  text-decoration-style: none;
+}
+
+figure {
+    margin: 5px;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: brown;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.back {
+  background-color: #f6f6ef;
+  border: 2px solid black;
+  padding: 0.4rem;
+}
+
+a[aria-current="page"] {
+    font-weight: bold;
+    color: brown;
+    text-decoration: none;
 }
