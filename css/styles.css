@@ -241,3 +241,7 @@ tr:nth-child(even) {
 .table-container {
   overflow-x: auto; /* Enables horizontal scrolling for tables */
 }
+
+ul li {
+  line-height: 2rem;
+}
